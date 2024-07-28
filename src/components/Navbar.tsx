@@ -254,7 +254,7 @@ const Navbar = () => {
                   <a href="https://www.instagram.com/allrvvnn/" target="_blank">
                     <InstagramLogo size={25} className="text-primary" />
                   </a>
-                  <a href="https://wa.me/6281372647563" target="_blank">
+                  <a href="https://wa.me/6281372648563" target="_blank">
                     <WhatsappLogo size={25} className="text-primary" />
                   </a>
                   <a

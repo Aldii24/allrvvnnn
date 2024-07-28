@@ -16,7 +16,7 @@ const AboutPage = () => {
         initial={{ x: "-100%" }}
         whileInView={{ x: 0 }}
         transition={{ duration: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         className={`about text-xl p-4 w-max rounded-md ${
           theme === "light"
             ? "text-lightMode bg-primary"
@@ -30,7 +30,7 @@ const AboutPage = () => {
       <motion.img
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 1 }}
         src="1.gif"
         alt=""
@@ -40,7 +40,7 @@ const AboutPage = () => {
         initial={{ x: "100%" }}
         whileInView={{ x: 0 }}
         transition={{ duration: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         className={`about flex absolute top-32 right-8 text-xs p-4 w-[200px] rounded-md ${
           theme === "light"
             ? "text-lightMode bg-primary"
@@ -56,7 +56,7 @@ const AboutPage = () => {
         initial={{ x: "-100%" }}
         whileInView={{ x: 0 }}
         transition={{ duration: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         className={`about flex absolute top-[260px] left-0 text-xs p-4 w-[200px] rounded-md ${
           theme === "light"
             ? "text-lightMode bg-primary"
@@ -68,7 +68,7 @@ const AboutPage = () => {
       <motion.img
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 1 }}
         src="2.gif"
         alt=""
@@ -81,7 +81,7 @@ const AboutPage = () => {
         initial={{ x: "100%" }}
         whileInView={{ x: 0 }}
         transition={{ duration: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         className={`about flex absolute top-[390px] right-0 text-xs p-4 w-[200px] rounded-md ${
           theme === "light"
             ? "text-lightMode bg-primary"
@@ -93,7 +93,7 @@ const AboutPage = () => {
       <motion.img
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 1 }}
         src="3.gif"
         alt=""
@@ -106,7 +106,7 @@ const AboutPage = () => {
         initial={{ x: "-100%" }}
         whileInView={{ x: 0 }}
         transition={{ duration: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         className={`about flex absolute top-[530px] left-0 text-xs p-4 w-[200px] rounded-md ${
           theme === "light"
             ? "text-lightMode bg-primary"
@@ -118,7 +118,7 @@ const AboutPage = () => {
       <motion.img
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 1 }}
         src="4.png"
         alt=""
@@ -131,7 +131,7 @@ const AboutPage = () => {
         initial={{ x: "100%" }}
         whileInView={{ x: 0 }}
         transition={{ duration: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         className={`about flex absolute top-[650px] right-0 text-xs p-4 w-[200px] rounded-md ${
           theme === "light"
             ? "text-lightMode bg-primary"
@@ -143,7 +143,7 @@ const AboutPage = () => {
       <motion.img
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 1 }}
         src="5.gif"
         alt=""
