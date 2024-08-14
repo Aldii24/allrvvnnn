@@ -8,7 +8,7 @@ const AboutPage = () => {
   return (
     <div
       id="about"
-      className={`overflow-hidden relative pt-10 min-h-screen rounded-md`}
+      className={`overflow-x-hidden relative pt-10 h-[900px] rounded-md`}
     >
       <div className="md:hidden absolute top-0 left-[28%] w-[15px] h-[15px] bg-primary rounded-full"></div>
       <div className="md:hidden absolute w-[2px] h-10 bg-primary top-2 left-[30%]"></div>

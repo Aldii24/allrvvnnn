@@ -74,7 +74,7 @@ const ThougtsSection = () => {
                 theme === "light" ? "text-smoothDark" : "text-lightMode"
               }`}
             >
-              Blue, and sometimes i feel blue .
+              Black, blue, green.
             </p>
           </div>
         </motion.div>
@@ -98,7 +98,7 @@ const ThougtsSection = () => {
                 theme === "light" ? "text-smoothDark" : "text-lightMode"
               }`}
             >
-              Idk, i eat all 😋.
+              Idk, nothing specific.
             </p>
           </motion.div>
         </div>
@@ -122,7 +122,7 @@ const ThougtsSection = () => {
                 theme === "light" ? "text-smoothDark" : "text-lightMode"
               }`}
             >
-              Moon & someone that i can't have it.
+              Everything in the sky.
             </p>
           </motion.div>
         </div>
