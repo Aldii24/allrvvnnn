@@ -1,4 +1,4 @@
-import { Minus, Plus } from "@phosphor-icons/react/dist/ssr";
+import { Minus, PaperPlaneTilt, Plus } from "@phosphor-icons/react/dist/ssr";
 import { useContext, useState } from "react";
 import { darkModeContext } from "../context/darkMode-context";
 
@@ -19,7 +19,7 @@ const ContactPage = () => {
             isOpen ? "border-b pb-1" : ""
           }`}
         >
-          <h3 className="text-lightMode text-sm">Apa nichhh !!!</h3>
+          <h3 className="text-lightMode text-sm">Hi again !!!</h3>
           {isOpen ? (
             <Minus size={15} className="text-lightMode" />
           ) : (
@@ -28,9 +28,9 @@ const ContactPage = () => {
         </div>
         {isOpen ? (
           <p className="text-lightMode text-xs mt-2 transition-all duration-300">
-            Uda sampe bawah aja nich. Btw makasiii uda dtg ke website saya, kalo
-            pgn chat ownernya tinggal chat ajaa gausa malu malu, pasti dibales
-            kok xixi :3
+            Thank u for visiting my website, this is just for share my thoughts
+            into a code. Thank u for read all the content of this site. Hope
+            u're doing great day.
           </p>
         ) : (
           ""
@@ -104,8 +104,9 @@ const ContactPage = () => {
               required
             />
           </div>
-          <button className="px-4 py-2 bg-primary rounded-md text-lightMode font-bold shadow-xl focus:ring-2 focus:ring-primary">
-            Kirim
+          <button className="flex justify-center items-center gap-2 px-4 py-2 bg-primary opacity-90 rounded-md text-lightMode font-bold shadow-xl focus:ring-2 focus:ring-primary hover:opacity-100 transition-opacity ease-in-out duration-300">
+            <PaperPlaneTilt size={15} weight="fill" />
+            Send
           </button>
         </form>
       </div>

@@ -5,13 +5,6 @@ const RandomPhotos = () => {
 
   return (
     <div className="flex flex-col mt-5">
-      {/* <h3
-        className={`flex justify-end text-md font-thin ${
-          theme === "light" ? "text-primary" : "text-lightMode"
-        } `}
-      >
-        Idk, just random photos :3
-      </h3> */}
       <div className="grid grid-cols-2 gap-4">
         <motion.img
           initial={{ x: "-100%" }}
