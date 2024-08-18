@@ -11,8 +11,10 @@ import {
   InstagramLogo,
   WhatsappLogo,
   FacebookLogo,
+  SpeakerHigh,
+  SpeakerSlash,
 } from "@phosphor-icons/react/dist/ssr";
-import { useContext, useState } from "react";
+import { useContext, useState, useRef } from "react";
 import ToggleDarkMode from "./ToggleDarkMode";
 import { darkModeContext } from "../context/darkMode-context";
 
@@ -20,15 +22,26 @@ const Navbar = () => {
   const { theme } = useContext(darkModeContext);
   const [activeMenu, setActiveMenu] = useState("home");
   const [isShowMenu, setIsShowMenu] = useState(false);
+  const [isPlayMusic, setIsPlayMusic] = useState(false);
+
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  if (!audioRef.current) {
+    audioRef.current = new Audio("fil-cas.mp3");
+  }
 
   const handleMenuClick = (menu: string) => {
     setActiveMenu(menu);
   };
 
-  const playMusic = () => {
-    const audio = new Audio("fil-cas.mp3");
-    audio.play();
-    audio.loop = true;
+  const toggleMusic = () => {
+    if (isPlayMusic) {
+      audioRef.current?.pause();
+    } else {
+      audioRef.current?.play();
+      audioRef.current!.loop = true;
+    }
+    setIsPlayMusic(!isPlayMusic);
   };
 
   return (
@@ -133,10 +146,15 @@ const Navbar = () => {
           <div className="flex items-center gap-4">
             <button
               className="flex items-center gap-1 p-2 bg-primary hover:bg-opacity-90 transition-all duration-300 rounded-full text-xs text-lightMode font-medium"
-              onClick={playMusic}
+              onClick={toggleMusic}
             >
-              Aldiii <PersonSimple />
+              {isPlayMusic ? (
+                <SpeakerHigh size={15} />
+              ) : (
+                <SpeakerSlash size={15} />
+              )}
             </button>
+
             {isShowMenu ? (
               <X
                 size={25}
@@ -220,6 +238,19 @@ const Navbar = () => {
                 </a>
                 <a
                   className={`flex items-center gap-2 p-2 text-xs rounded-md transition-all ease-in-out duration-500 ${
+                    activeMenu === "projects" ? "bg-primary text-lightMode" : ""
+                  } ${theme === "light" ? "" : "text-lightMode"}`}
+                  href="#projects"
+                  onClick={() => handleMenuClick("projects")}
+                >
+                  <ReadCvLogo
+                    size={20}
+                    weight={activeMenu === "projects" ? "fill" : "regular"}
+                  />
+                  Projects
+                </a>
+                <a
+                  className={`flex items-center gap-2 p-2 text-xs rounded-md transition-all ease-in-out duration-500 ${
                     activeMenu === "contact" ? "bg-primary text-lightMode" : ""
                   } ${theme === "light" ? "" : "text-lightMode"}`}
                   href="#contact"
@@ -232,6 +263,7 @@ const Navbar = () => {
                   Contact
                 </a>
               </div>
+
               <div className="flex flex-col gap-4 border-b pb-4 border-primary">
                 <p
                   className={`text-xs border-b border-primary pb-2 ${
@@ -242,28 +274,20 @@ const Navbar = () => {
                 </p>
                 <ToggleDarkMode />
               </div>
-              <div className="flex flex-col gap-4">
-                <p
-                  className={`text-xs border-b border-primary pb-2 ${
-                    theme === "light" ? "text-smoothDark" : "text-lightMode"
-                  }`}
+
+              <div className="flex justify-between gap-4 px-4 items-center">
+                <a href="https://www.instagram.com/allrvvnn/" target="_blank">
+                  <InstagramLogo size={25} className="text-primary" />
+                </a>
+                <a href="https://wa.me/6281372648563" target="_blank">
+                  <WhatsappLogo size={25} className="text-primary" />
+                </a>
+                <a
+                  href="https://facebook.com/aldi.irawan.311493/"
+                  target="_blank"
                 >
-                  Social media
-                </p>
-                <div className="flex gap-4 pb-4">
-                  <a href="https://www.instagram.com/allrvvnn/" target="_blank">
-                    <InstagramLogo size={25} className="text-primary" />
-                  </a>
-                  <a href="https://wa.me/6281372648563" target="_blank">
-                    <WhatsappLogo size={25} className="text-primary" />
-                  </a>
-                  <a
-                    href="https://facebook.com/aldi.irawan.311493/"
-                    target="_blank"
-                  >
-                    <FacebookLogo size={25} className="text-primary" />
-                  </a>
-                </div>
+                  <FacebookLogo size={25} className="text-primary" />
+                </a>
               </div>
             </div>
           )}

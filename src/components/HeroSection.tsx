@@ -46,8 +46,8 @@ const HeroSection = () => {
           Hallooo !!!
         </h3>
         <p className="text-xs md:text-xl px-4 py-2">
-          Uda siap buat liat kebawah blm? kalo uda, pencet dulu nama saya yg ada
-          di atas tuh :3
+          Uda siap buat liat kebawah blm? kalo uda, klik dulu speaker yg ada di
+          bagian atas kanan tuh :3
         </p>
       </motion.div>
       <img
